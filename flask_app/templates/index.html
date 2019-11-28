@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+
+
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <title>Homepage Test!</title>
+  <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static',
+              filename='css/styles.css')}}" />
+</head>
+<body>
+
+You are on the index page again... don't you have again better to do??
+
+<p>Click the button to display a random test number between 1 and 10.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = Math.floor((Math.random() * 10) + 1);
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+
+
+</body>
+</html>

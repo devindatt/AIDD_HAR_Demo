@@ -1,0 +1,1 @@
+document.writeln("<h1>RestNet 34 Kinetics Video test page</h1>");

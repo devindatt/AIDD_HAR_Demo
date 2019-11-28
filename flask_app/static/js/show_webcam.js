@@ -1,0 +1,1 @@
+document.writeln("<h1>FlexEdge Show Webcam video page</h1>");
