@@ -17,10 +17,23 @@ Here we applied the human activity recognition model using the OpenCV library an
 
 Our project consists of the following files:
 
-action_recognition_kinetics.txt : The class labels for the Kinetics dataset.
-resnet-34_kinetics.onx : Hara et al.’s pre-trained and serialized human activity recognition convolutional neural network trained on the Kinetics dataset.
-human_activity_reco.py : Our human activity recognition script which samples N frames at a time to make an activity classification prediction.
-human_activity_reco_deque.py : A similar human activity recognition script that implements a rolling average queue. This script runs slower to run but is more accurate when making predictions
+| Plugin | README |
+| ------ | ------ |
+| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| GitHub | [plugins/github/README.md][PlGh] |
+| Google Drive | [plugins/googledrive/README.md][PlGd] |
+| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Medium | [plugins/medium/README.md][PlMe] |
+| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+
+| File | Description |
+| ------ | ------ |
+| app.py | Flask main application that invokes local web server |
+| action_recognition_kinetics.txt | The class labels for the Kinetics dataset |
+| resnet-34_kinetics.onx | Hara et al.’s pre-trained and serialized human activity recognition convolutional neural network trained on the Kinetics dataset|
+|human_activity_reco.py | Our human activity recognition script which samples N frames at a time to make an activity classification prediction|
+|human_activity_reco_deque.py | A similar human activity recognition script that implements a rolling average queue. This script runs slower to run but is more accurate when making predictions|
+
 
 ### Package Requirements:
 Human Activity Recognition models require at least OpenCV 4.1.2.
@@ -30,15 +43,22 @@ Human Activity Recognition models require at least OpenCV 4.1.2.
 
 1) Clone the repo with all pre-trained human activity recognition model, Python + OpenCV source code to your local drive.
 
-2) Copy any sample exercise video to this cloned folder on your local hard drive.
+2) Copy any sample exercise video (ie. example_activities.mp4) to this cloned folder on your local hard drive.
 
 3) Open your favorite Terminal and run these commands.
 
 Command to run app:
 ```sh
-$ python human_activity_reco_deque.py --model resnet-34_kinetics.onnx \
+$ app.py --model resnet-34_kinetics.onnx \
 	--classes action_recognition_kinetics.txt \
 	--input example_activities.mp4
+[INFO] loading human activity recognition model...
+[INFO] accessing video stream...
+```
+4) If you want your flask app to read video from your webcam simply leave out input agrument (it will automatically recognize to use your webcam or video cam):
+```sh
+$ app.py --model resnet-34_kinetics.onnx \
+	--classes action_recognition_kinetics.txt 
 [INFO] loading human activity recognition model...
 [INFO] accessing video stream...
 ```
