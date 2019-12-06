@@ -1,7 +1,5 @@
 # Human Activty Recognition
 
-[![P|Python](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 RestNet-34 model using the Kinetic dataset to predict exercises in a video or webcam:
 
 Kinetics dataset, the dataset used to train our human activity recognition model.
@@ -9,6 +7,8 @@ Kinetics dataset, the dataset used to train our human activity recognition model
 Extending ResNet, which typically uses 2D kernels, to instead leverage 3D kernels, enabling us to include a spatiotemporal component used for activity recognition.
 
 Here we applied the human activity recognition model using the OpenCV library and the Python programming language to custom videos with only exercises.
+
+This script runs slower to run but is more accurate when making predictions 
 
 
 
@@ -19,11 +19,12 @@ Our project consists of the following files:
 
 | File | Description |
 | ------ | ------ |
-| app.py | Flask main application that invokes local web server |
+| GymnTRainer.pptx | Presentation slides explaining Human Activity Recognition gym app |
+| Flask_app | Directory with all the css & javascript files that make up website |
+| app.py | Flask main application that invokes local web server and runs the human activity recognition model that implements a rolling average queue |
 | action_recognition_kinetics.txt | The class labels for the Kinetics dataset |
 | resnet-34_kinetics.onx | Hara et al.’s pre-trained and serialized human activity recognition convolutional neural network trained on the Kinetics dataset|
-|human_activity_reco.py | Our human activity recognition script which samples N frames at a time to make an activity classification prediction|
-|human_activity_reco_deque.py | A similar human activity recognition script that implements a rolling average queue. This script runs slower to run but is more accurate when making predictions|
+
 
 
 ### Package Requirements:
