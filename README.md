@@ -17,15 +17,6 @@ Here we applied the human activity recognition model using the OpenCV library an
 
 Our project consists of the following files:
 
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
 | File | Description |
 | ------ | ------ |
 | app.py | Flask main application that invokes local web server |
@@ -70,7 +61,7 @@ cv2.error: OpenCV(4.1.0) /Users/home_directory/build/skvark/opencv-python/opencv
 ```
 If you receive that error you need to upgrade your OpenCV install to at least OpenCV 4.1.2.
 
-If all deployed correctly you should see another window open up (might be behind your terminal window) and you should see predictions being made on your video:
+5) If all deployed correctly you should see another window open up (might be behind your terminal window) and you should see predictions being made on your video:
 
 Note: the frame rate might be extremely slow if you are not using a GPU.
 
